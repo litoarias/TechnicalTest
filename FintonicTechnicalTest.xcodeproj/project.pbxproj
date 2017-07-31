@@ -91,6 +91,7 @@
 				41736CA21F2F77C900D00C47 /* NTWSuperheroe.swift */,
 			);
 			name = NetworkModels;
+			path = NetworkModels;
 			sourceTree = "<group>";
 		};
 		41736CAD1F2F7E8B00D00C47 /* ViewModels */ = {
@@ -100,37 +101,41 @@
 				41736CAF1F2F7E9E00D00C47 /* VWSuperheroe.swift */,
 			);
 			name = ViewModels;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		41736CB21F2F7F3E00D00C47 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				41736CA81F2F780200D00C47 /* APIConstants.swift */,
 				41736CB51F2F7F7E00D00C47 /* NetworkProviders */,
 				41736CB61F2F7F8A00D00C47 /* NetworkRouters */,
 				41736CB71F2F7F9200D00C47 /* SessionManager */,
+				41736CA81F2F780200D00C47 /* APIConstants.swift */,
 			);
 			name = NetworkLayer;
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		41736CB31F2F7F5000D00C47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				41736CAD1F2F7E8B00D00C47 /* ViewModels */,
 				41736C9C1F2F75F800D00C47 /* NetworkModels */,
+				41736CAD1F2F7E8B00D00C47 /* ViewModels */,
 			);
 			name = Entities;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		41736CB41F2F7F6F00D00C47 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				41736CD31F2F80BB00D00C47 /* Extensions */,
-				41736CD51F2F80BB00D00C47 /* ProtocolExtensions */,
 				41736CB31F2F7F5000D00C47 /* Entities */,
+				41736CD31F2F80BB00D00C47 /* Extensions */,
 				41736CB21F2F7F3E00D00C47 /* NetworkLayer */,
+				41736CD51F2F80BB00D00C47 /* ProtocolExtensions */,
 			);
 			name = Commons;
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		41736CB51F2F7F7E00D00C47 /* NetworkProviders */ = {
@@ -139,6 +144,7 @@
 				41736CA51F2F780200D00C47 /* HeroProvider.swift */,
 			);
 			name = NetworkProviders;
+			path = NetworkProviders;
 			sourceTree = "<group>";
 		};
 		41736CB61F2F7F8A00D00C47 /* NetworkRouters */ = {
@@ -147,6 +153,7 @@
 				41736CA61F2F780200D00C47 /* HeroRouter.swift */,
 			);
 			name = NetworkRouters;
+			path = NetworkRouters;
 			sourceTree = "<group>";
 		};
 		41736CB71F2F7F9200D00C47 /* SessionManager */ = {
@@ -155,6 +162,7 @@
 				41736CA71F2F780200D00C47 /* NetworkSessionManager.swift */,
 			);
 			name = SessionManager;
+			path = SessionManager;
 			sourceTree = "<group>";
 		};
 		41736CB81F2F800500D00C47 /* Modules */ = {
@@ -163,19 +171,21 @@
 				41736CC81F2F806900D00C47 /* Main */,
 			);
 			name = Modules;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		41736CC81F2F806900D00C47 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				41736CDC1F2F83FF00D00C47 /* Main.storyboard */,
 				41736CC91F2F807100D00C47 /* MainContract.swift */,
 				41736CCA1F2F807100D00C47 /* MainInteractor.swift */,
 				41736CCB1F2F807100D00C47 /* MainPresenter.swift */,
 				41736CCC1F2F807100D00C47 /* MainRouter.swift */,
 				41736CCD1F2F807100D00C47 /* MainViewController.swift */,
-				41736CDC1F2F83FF00D00C47 /* Main.storyboard */,
 			);
 			name = Main;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		41736CD31F2F80BB00D00C47 /* Extensions */ = {
@@ -204,15 +214,16 @@
 				41736CDA1F2F82EB00D00C47 /* RootRouter.swift */,
 			);
 			name = Application;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		41EE97601F2F72E4006BD3DB = {
 			isa = PBXGroup;
 			children = (
 				41EE976B1F2F72E4006BD3DB /* FintonicTechnicalTest */,
-				41EE976A1F2F72E4006BD3DB /* Products */,
-				57019EB91E86EF5EBD5CB7C6 /* Pods */,
 				03C8C78861256BEC48D6AE18 /* Frameworks */,
+				57019EB91E86EF5EBD5CB7C6 /* Pods */,
+				41EE976A1F2F72E4006BD3DB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,12 +238,12 @@
 		41EE976B1F2F72E4006BD3DB /* FintonicTechnicalTest */ = {
 			isa = PBXGroup;
 			children = (
-				41736CB81F2F800500D00C47 /* Modules */,
-				41736CB41F2F7F6F00D00C47 /* Commons */,
 				41736CD91F2F82D600D00C47 /* Application */,
+				41736CB41F2F7F6F00D00C47 /* Commons */,
+				41736CB81F2F800500D00C47 /* Modules */,
 				41EE97731F2F72E4006BD3DB /* Assets.xcassets */,
-				41EE97751F2F72E4006BD3DB /* LaunchScreen.storyboard */,
 				41EE97781F2F72E4006BD3DB /* Info.plist */,
+				41EE97751F2F72E4006BD3DB /* LaunchScreen.storyboard */,
 			);
 			path = FintonicTechnicalTest;
 			sourceTree = "<group>";
@@ -402,6 +413,7 @@
 				41EE97761F2F72E4006BD3DB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
