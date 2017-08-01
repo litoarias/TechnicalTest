@@ -54,4 +54,18 @@ extension MainViewController:UICollectionViewDataSource, UICollectionViewDelegat
         cell.hero = heroes?[indexPath.item]
         return cell
     }
+    
+}
+
+extension MainViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let currentCell = sender as? HeroCollectionViewCell,
+            let vc = segue.destination as? HeroDetailViewController,
+            let currentCellIndex = collectionView.indexPath(for: currentCell) {
+            vc.selectedIndex = currentCellIndex
+            vc.heroes = heroes
+        }
+    }
+    
 }

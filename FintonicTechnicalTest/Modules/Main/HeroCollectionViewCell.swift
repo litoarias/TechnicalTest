@@ -13,10 +13,15 @@ class HeroCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var powerLabel: UILabel!
+    @IBOutlet weak var abilitiesLabel: UILabel!
+    @IBOutlet weak var groupsLabel: UILabel!
     
-    var useShortDescription: Bool = true
+    var detail: Bool = true
     
     var hero: VWSuperheroe? {
+        
         didSet {
             guard let hero = hero else { return }
             
@@ -30,6 +35,12 @@ class HeroCollectionViewCell: UICollectionViewCell {
                 imageView.loadImage(url: urlImg)
             }
             
+            if !detail, let height = hero.height, let power = hero.power, let abilities = hero.abilities, let groups = hero.groups {
+                heightLabel.text = height
+                powerLabel.text = power
+                abilitiesLabel.text = abilities
+                groupsLabel.text = groups
+            }
         }
     }
 
