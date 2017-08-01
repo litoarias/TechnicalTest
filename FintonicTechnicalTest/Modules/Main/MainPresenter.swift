@@ -32,7 +32,7 @@ extension MainPresenter: MainInteractorOutput {
         let viewModelHero = VWHero(fromDictionary: data.toJSON())
         
         if viewModelHero.superheroes.count > 0 {
-            
+            self.view?.heroesObtained(data: viewModelHero)
         } else {
             failureHero(error: NSError.emptyDataError())
         }

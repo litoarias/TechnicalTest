@@ -1,8 +1,8 @@
 //
 //  UIAlertController.swift
-//  TemplateSwift3
+//  FintonicTechnicalTest
 //
-//  Created by Hipolito Arias on 13/07/2017.
+//  Created by Hipolito Arias on 01/08/2017.
 //  Copyright © 2017 Hipolito Arias. All rights reserved.
 //
 
