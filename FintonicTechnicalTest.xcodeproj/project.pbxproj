@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A7001A01F3080780027D303 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A70019F1F3080780027D303 /* HeroDetailViewController.swift */; };
 		0A80B0F61F30695200D9C186 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A80B0F51F30695200D9C186 /* Main.storyboard */; };
 		0A80B0FB1F306BDF00D9C186 /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B0FA1F306BDF00D9C186 /* HeroCollectionViewCell.swift */; };
 		0A80B18E1F306EBB00D9C186 /* HeroAnimatorViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B1651F306EBB00D9C186 /* HeroAnimatorViewContext.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A70019F1F3080780027D303 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 		0A80B0F51F30695200D9C186 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0A80B0FA1F306BDF00D9C186 /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
 		0A80B1651F306EBB00D9C186 /* HeroAnimatorViewContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAnimatorViewContext.swift; sourceTree = "<group>"; };
@@ -161,6 +163,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0A70019E1F3080550027D303 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0A70019F1F3080780027D303 /* HeroDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		0A7001A11F3083430027D303 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				41EE97731F2F72E4006BD3DB /* Assets.xcassets */,
+				41EE97781F2F72E4006BD3DB /* Info.plist */,
+				41EE97751F2F72E4006BD3DB /* LaunchScreen.storyboard */,
+				0A80B0F51F30695200D9C186 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0A7001A21F30881F0027D303 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0A80B0FA1F306BDF00D9C186 /* HeroCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		0A80B0FE1F306CA800D9C186 /* ExternalLibraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,22 +203,22 @@
 			children = (
 				0A80B1641F306EBB00D9C186 /* Animator */,
 				0A80B1691F306EBB00D9C186 /* Debug Plugin */,
-				0A80B16C1F306EBB00D9C186 /* DefaultAnimationPreprocessor.swift */,
 				0A80B16D1F306EBB00D9C186 /* Extensions */,
+				0A80B1821F306EBB00D9C186 /* Parser */,
+				0A80B1871F306EBB00D9C186 /* Preprocessors */,
+				0A80B16C1F306EBB00D9C186 /* DefaultAnimationPreprocessor.swift */,
 				0A80B1761F306EBB00D9C186 /* Hero.h */,
 				0A80B1771F306EBB00D9C186 /* Hero.swift */,
 				0A80B1781F306EBB00D9C186 /* HeroBaseController.swift */,
 				0A80B1791F306EBB00D9C186 /* HeroContext.swift */,
 				0A80B17A1F306EBB00D9C186 /* HeroIndependentController.swift */,
-				0A80B17B1F306EBB00D9C186 /* HeroModifier.swift */,
 				0A80B17C1F306EBB00D9C186 /* HeroModifier+HeroStringConvertible.swift */,
+				0A80B17B1F306EBB00D9C186 /* HeroModifier.swift */,
 				0A80B17D1F306EBB00D9C186 /* HeroPlugin.swift */,
 				0A80B17E1F306EBB00D9C186 /* HeroStringConvertible.swift */,
 				0A80B17F1F306EBB00D9C186 /* HeroTargetState.swift */,
 				0A80B1801F306EBB00D9C186 /* HeroTypes.swift */,
 				0A80B1811F306EBB00D9C186 /* Info.plist */,
-				0A80B1821F306EBB00D9C186 /* Parser */,
-				0A80B1871F306EBB00D9C186 /* Preprocessors */,
 			);
 			path = Hero;
 			sourceTree = "<group>";
@@ -330,6 +359,7 @@
 		41736CB81F2F800500D00C47 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0A70019E1F3080550027D303 /* Detail */,
 				41736CC81F2F806900D00C47 /* Main */,
 			);
 			path = Modules;
@@ -338,8 +368,7 @@
 		41736CC81F2F806900D00C47 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				0A80B0FA1F306BDF00D9C186 /* HeroCollectionViewCell.swift */,
-				0A80B0F51F30695200D9C186 /* Main.storyboard */,
+				0A7001A21F30881F0027D303 /* Cells */,
 				41736CC91F2F807100D00C47 /* MainContract.swift */,
 				41736CCA1F2F807100D00C47 /* MainInteractor.swift */,
 				41736CCB1F2F807100D00C47 /* MainPresenter.swift */,
@@ -353,9 +382,9 @@
 			isa = PBXGroup;
 			children = (
 				41736CE01F2FAFE900D00C47 /* Error.swift */,
-				0A80B1B21F3071FF00D9C186 /* UIImageView.swift */,
 				41736CE21F2FB59800D00C47 /* NSError.swift */,
 				41736CDE1F2FAFC200D00C47 /* UIAlertController.swift */,
+				0A80B1B21F3071FF00D9C186 /* UIImageView.swift */,
 				41736CD41F2F80BB00D00C47 /* UIStoryboard.swift */,
 			);
 			path = Extensions;
@@ -402,9 +431,7 @@
 				41736CD91F2F82D600D00C47 /* Application */,
 				41736CB41F2F7F6F00D00C47 /* Commons */,
 				41736CB81F2F800500D00C47 /* Modules */,
-				41EE97731F2F72E4006BD3DB /* Assets.xcassets */,
-				41EE97781F2F72E4006BD3DB /* Info.plist */,
-				41EE97751F2F72E4006BD3DB /* LaunchScreen.storyboard */,
+				0A7001A11F3083430027D303 /* Resources */,
 			);
 			path = FintonicTechnicalTest;
 			sourceTree = "<group>";
@@ -550,6 +577,7 @@
 				0A80B1901F306EBB00D9C186 /* HeroDefaultAnimator.swift in Sources */,
 				41736CD11F2F807100D00C47 /* MainRouter.swift in Sources */,
 				41736CA31F2F77C900D00C47 /* NTWHero.swift in Sources */,
+				0A7001A01F3080780027D303 /* HeroDetailViewController.swift in Sources */,
 				0A80B1941F306EBB00D9C186 /* DefaultAnimationPreprocessor.swift in Sources */,
 				41736CA41F2F77C900D00C47 /* NTWSuperheroe.swift in Sources */,
 				41736CD71F2F80BB00D00C47 /* UIStoryboard.swift in Sources */,
@@ -719,7 +747,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4U72882THN;
-				INFOPLIST_FILE = FintonicTechnicalTest/Info.plist;
+				INFOPLIST_FILE = FintonicTechnicalTest/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.masterapps.FintonicTechnicalTest;
@@ -734,7 +762,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4U72882THN;
-				INFOPLIST_FILE = FintonicTechnicalTest/Info.plist;
+				INFOPLIST_FILE = FintonicTechnicalTest/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.masterapps.FintonicTechnicalTest;
