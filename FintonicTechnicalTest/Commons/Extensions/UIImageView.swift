@@ -19,7 +19,11 @@ extension UIImageView {
                 return
             }
             DispatchQueue.main.async {
+                self.alpha = 0.0
                 self.image = respImage
+                UIView.animate(withDuration: 0.275, animations: {
+                    self.alpha = 1.0
+                })
             }
         }
 
