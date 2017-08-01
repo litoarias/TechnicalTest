@@ -15,6 +15,11 @@ class MainViewController: UIViewController, StoryboardLoadable {
     
     var presenter: MainPresentation?
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var cities = City.cities
+    
+    
     // MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -38,4 +43,16 @@ extension MainViewController: MainView {
         UIAlertController.presentAlertInViewController(self, title: "Error", message: error.message, actions: actions, completion: nil)
     }
     
+}
+
+extension MainViewController:UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return cities.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "item", for: indexPath) as? HeroCollectionViewCell)!
+        cell.city = cities[indexPath.item]
+        return cell
+    }
 }

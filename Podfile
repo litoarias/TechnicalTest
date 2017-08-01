@@ -7,4 +7,5 @@ target 'FintonicTechnicalTest' do
     pod 'ObjectMapper', '~> 2.2'
     pod 'SVProgressHUD'
     pod 'AlamofireImage', '~> 3.1'
+#    pod 'Hero'
 end
