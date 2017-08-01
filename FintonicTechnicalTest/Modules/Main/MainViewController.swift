@@ -14,11 +14,9 @@ class MainViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     
     var presenter: MainPresentation?
+    var heroes: [VWSuperheroe]? = []
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    var cities = City.cities
-    
     
     // MARK: Lifecycle
     
@@ -33,7 +31,8 @@ class MainViewController: UIViewController, StoryboardLoadable {
 extension MainViewController: MainView {
     
     func heroesObtained(data: VWHero) {
-        debugPrint("\(data)")
+        heroes = data.superheroes
+        collectionView.reloadData()
     }
     
     func showError(error: Error) {
@@ -47,12 +46,12 @@ extension MainViewController: MainView {
 
 extension MainViewController:UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cities.count
+        return heroes!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "item", for: indexPath) as? HeroCollectionViewCell)!
-        cell.city = cities[indexPath.item]
+        cell.hero = heroes?[indexPath.item]
         return cell
     }
 }

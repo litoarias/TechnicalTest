@@ -16,16 +16,20 @@ class HeroCollectionViewCell: UICollectionViewCell {
     
     var useShortDescription: Bool = true
     
-    var city: City? {
+    var hero: VWSuperheroe? {
         didSet {
-            guard let city = city else { return }
-            let name = city.name
+            guard let hero = hero else { return }
             
-            heroID = "\(name)"
+            if let name = hero.name, let realName = hero.realName {
+                heroID = "\(name)"
+                nameLabel.text = name
+                descriptionLabel.text = realName
+            }
             
-            nameLabel.text = name
-            imageView.image = city.image
-            descriptionLabel.text = useShortDescription ? city.shortDescription : city.description
+            if let urlImg = hero.photo {
+                imageView.loadImage(url: urlImg)
+            }
+            
         }
     }
 
